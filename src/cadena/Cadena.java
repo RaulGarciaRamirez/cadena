@@ -2,11 +2,11 @@ package cadena;
 
 public class Cadena {
 
-	public int longitud(String cadena) {
+	public static int longitud(String cadena) {
 		return cadena.length();
 	}
 
-	public int vocales(String cadena) {
+	public static int vocales(String cadena) {
 		int numVocales = 0;
 		char[] vocales = { 'a', 'e', 'i', 'o', 'u' };
 
@@ -21,17 +21,17 @@ public class Cadena {
 		return numVocales;
 	}
 
-	public String invertir(String cadena) {
+	public static String invertir(String cadena) {
 		StringBuilder invertido = new StringBuilder();
 
-		for (int i = cadena.length(); i > 0; i--) {
+		for (int i = (cadena.length() - 1); i >= 0; i--) {
 			invertido.append(cadena.charAt(i));
 		}
 
 		return invertido.toString();
 	}
 
-	public int contarLetra(String cadena, char caracter) {
+	public static int contarLetra(String cadena, char caracter) {
 		int contador = 0;
 
 		for (int i = 0; i < cadena.length(); i++) {
