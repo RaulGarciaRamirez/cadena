@@ -29,8 +29,13 @@ class CadenaTest {
 	}
 
 	@Test
-	void testContarLetra() {
+	void testContarLetraCuandoHay() {
 		assertEquals(2, Cadena.contarLetra("patata", 't'));
+	}
+	
+	@Test
+	void testContarLetraCuandoNoHay() {
+		assertEquals(0, Cadena.contarLetra("patata", 'y'));
 	}
 
 }
